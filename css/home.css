@@ -8,59 +8,6 @@ body{
   background-color: #000;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000000;
-  padding: 35px 5%;
-  position: relative;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.logo img {
-  height: 100px;
-}
-
-.cart-link {
-  color: #fff;
-  font-size: 1.4rem;
-  transition: color 0.3s;
-}
-
-.cart-link:hover {
-  color: #ffd700;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ffd700;
-}
-
-i {
-    color: white;
-    font-size: 1.1vw;
-}
-
 
 .hero {
   min-height: 90vh; 
@@ -99,6 +46,9 @@ i {
   border-radius: 5px;
   text-decoration: none;
 }
+
+/* Cards productos (carrito feedback) */
+.card__btn.added{ background:#1f3d16 !important; color:#9dff7a !important; border-color:#395b2e !important; }
 
 .hero-button:hover{
   transform: scale(1.1);

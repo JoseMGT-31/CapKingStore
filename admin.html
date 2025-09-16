@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Admin - CapKing Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <script src="https://kit.fontawesome.com/dd4a418d4e.js" crossorigin="anonymous"></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/navbar.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="home.html">Inicio</a></li>
+        <li><a href="home.html#productos">Productos</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="logo"><img src="assets/images/logo_capking_white.png" alt="CapKing Store Logo"></div>
+      <div class="nav-actions">
+        <a href="login.html" class="mini-btn"><i class="fa-solid fa-user"></i> Acceder</a>
+      </div>
+    </nav>
+  </header>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <h2>ADMIN</h2>
+      <ul class="admin-menu" id="adminMenu">
+        <li><a href="#" data-view="orders" class="active"><i class="fa-solid fa-receipt"></i> Órdenes</a></li>
+        <li><a href="#" data-view="inventory"><i class="fa-solid fa-boxes-stacked"></i> Inventario</a></li>
+        <li><a href="#" data-view="employees"><i class="fa-solid fa-user-gear"></i> Empleados</a></li>
+        <li><a href="#" data-view="clients"><i class="fa-solid fa-users"></i> Clientes</a></li>
+      </ul>
+    </aside>
+    <main class="admin-content">
+      <section id="viewContainer"></section>
+    </main>
+  </div>
+  <div class="toast" id="adminToast"><i class="fa-solid fa-circle-info"></i><span id="toastMsg">Mensaje</span></div>
+
+  <script src="js/data-productos.js" defer></script>
+  <script src="js/admin.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const sess = window.Auth.getSession();
+      if(!sess || (sess.role!=='admin' && sess.role!=='vendedor')){
+        alert('Acceso restringido. Debes iniciar sesión (admin o vendedor).');
+        location.href='login.html';
+      }
+    });
+  </script>
+</body>
+</html>

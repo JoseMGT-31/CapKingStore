@@ -1,0 +1,145 @@
+/* Checkout (Resumen de compra) */
+
+body {
+  margin: 0;
+  font-family: Boxed, system-ui, sans-serif;
+  background: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 40px auto 70px;
+  padding: 0 6%;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 2.1rem;
+  letter-spacing: .5px;
+}
+
+.resume-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 340px;
+  align-items: start;
+}
+
+@media (max-width: 980px) {
+  .resume-grid { grid-template-columns: 1fr; }
+}
+
+.box {
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 18px;
+  padding: 26px 28px 32px;
+}
+
+.box h2 {
+  margin: 0 0 18px;
+  font-size: 1.2rem;
+  letter-spacing: .4px;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.r-item {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 18px;
+}
+
+.r-item img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  background: #0d0d0d;
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.r-item-title {
+  margin: 0 0 4px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.r-item-attrs {
+  margin: 0 0 6px;
+  font-size: .65rem;
+  color: #bdbdbd;
+  letter-spacing: .4px;
+}
+
+.r-item-price {
+  font-size: .8rem;
+  font-weight: 600;
+  color: #ffd54a;
+}
+
+.r-item-line-total {
+  margin: 0;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: .85rem;
+  margin: 0 0 10px;
+}
+
+.summary-row.total {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffd54a;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid #222;
+}
+
+.btn-primary {
+  width: 100%;
+  background: #ffd54a;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 18px;
+  font-size: .9rem;
+  cursor: pointer;
+  letter-spacing: .5px;
+  transition: background .25s, transform .25s;
+}
+
+.btn-primary:hover { background: #ffe178; }
+.btn-primary:active { transform: translateY(1px); }
+
+.mini-link {
+  color: #ffd54a;
+  text-decoration: none;
+  font-size: .8rem;
+}
+
+.empty-msg {
+  margin: 10px 0 0;
+  font-size: .9rem;
+  color: #cfcfcf;
+}
+
+.purchase-note {
+  margin: 14px 0 0;
+  font-size: .65rem;
+  line-height: 1.4;
+  color: #bdbdbd;
+}
+
+.is-hidden { display: none !important; }

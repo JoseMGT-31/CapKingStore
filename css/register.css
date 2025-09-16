@@ -1,0 +1,218 @@
+@font-face {
+  font-family: Boxed;
+  src: url('../assets/fonts/BoxedRoundBook.ttf');
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Boxed, system-ui, sans-serif;
+  background: #000;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ajustes específicos sobre navbar global */
+#cart-icon { font-size: 1.2rem; }
+
+/* HERO */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.7)),
+    url("../assets/images/bg-register.png") center / cover no-repeat;
+  padding: 0 10%;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  font-size: clamp(1.9rem, 4.2vw, 2.8rem);
+}
+
+.hero-content > p {
+  margin: 0 0 22px;
+  color: #cfcfcf;
+  line-height: 1.45;
+  font-size: clamp(.95rem, 1.9vw, 1.05rem);
+}
+
+/* FORM */
+.form {
+  width: min(820px,100%);
+  margin: 24px auto 0;
+  background: rgba(10,10,10,.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  padding: 26px 22px 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px 18px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .form {
+    grid-template-columns: 1fr 1fr;
+    padding: 32px 34px 38px;
+  }
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  min-width: 0;
+}
+
+.field.full { grid-column: 1 / -1; }
+
+label {
+  font-weight: 600;
+  color: #e9e9e9;
+  font-size: .92rem;
+  letter-spacing: .2px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.required-indicator {
+  color: #ffd54a;
+  font-weight: 700;
+  font-size: .9em;
+  line-height: 1;
+}
+
+input,
+select {
+  font: inherit;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #3b3b3b;
+  background: rgba(18,18,18,.95);
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.3;
+  outline: none;
+  transition: border-color .18s, box-shadow .18s, background-color .18s;
+}
+
+input::placeholder { color: #9aa0a6; }
+
+input:focus,
+select:focus,
+input:focus-visible,
+select:focus-visible {
+  border-color: #ffd54a;
+  box-shadow: 0 0 0 3px rgba(255,213,74,.18);
+}
+
+input[disabled],
+select[disabled] {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.field.error input,
+.field.error select {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 2px rgba(255,107,107,.25);
+}
+
+.hint {
+  color: #bdbdbd;
+  font-size: .78rem;
+  line-height: 1.3;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: .8rem;
+  line-height: 1.2;
+  min-height: 1em;
+  font-weight: 500;
+}
+
+.btn {
+  grid-column: 1 / -1;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #ffd54a;
+  color: #151515;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: .3px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: filter .18s, transform .06s, box-shadow .18s;
+  box-shadow: 0 4px 14px -4px rgba(255,213,74,.4);
+}
+
+.btn:hover { filter: brightness(.95); }
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255,213,74,.28);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  filter: brightness(.92);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+  box-shadow: none;
+}
+
+.split-2 {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 520px) {
+  .split-2 { grid-template-columns: 1fr; }
+}
+
+.mini-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #1b1b1b;
+  color: #ffd54a;
+  padding: 6px 10px;
+  border: 1px solid #353535;
+  border-radius: 6px;
+  font-size: .9rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .18s;
+}
+.mini-btn:hover,
+.mini-btn:focus-visible {
+  background: #252525;
+  outline: none;
+}

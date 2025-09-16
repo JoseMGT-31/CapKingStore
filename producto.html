@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Producto - CapKing Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/producto.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <script src="https://kit.fontawesome.com/dd4a418d4e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="home.html">Inicio</a></li>
+        <li><a href="home.html#productos">Productos</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="logo"><img src="assets/images/logo_capking_white.png" alt="CapKing Store Logo"></div>
+      <div class="nav-actions">
+        <a href="login.html" class="mini-btn"><i class="fa-solid fa-user"></i> Acceder</a>
+        <a href="home.html" aria-label="Carrito"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </nav>
+  </header>
+  <main class="producto-wrap" id="productoWrap">
+    <!-- Contenido generado por JS -->
+  </main>
+  <div class="added-toast" id="addedToast"><i class="fa-solid fa-circle-check"></i><span id="addedMsg">Añadido al carrito</span></div>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/data-productos.js" defer></script>
+  <script src="js/producto-detalle.js" defer></script>
+</body>
+</html>

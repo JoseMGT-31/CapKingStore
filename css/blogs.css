@@ -1,0 +1,121 @@
+@font-face {
+  font-family: Boxed;
+  src: url('../assets/fonts/BoxedRoundBook.ttf');
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Boxed, system-ui, sans-serif;
+  background: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ajustes específicos opcionales */
+#cart-icon { font-size: 1.2rem; }
+
+/* Hero */
+.hero {
+  min-height: 42vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.7)),
+    url("../assets/images/bg-home.webp") center/cover no-repeat;
+  text-align: center;
+  padding: 0 6%;
+}
+
+.hero-content h1 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: .4px;
+}
+
+.hero-content .intro {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: .95rem;
+  line-height: 1.4;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+/* Grid de mini noticias */
+.blog-grid {
+  width: 100%;
+  max-width: 1220px;
+  margin: 40px auto 70px;
+  padding: 0 6%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .2s, transform .2s;
+  cursor: default;
+}
+.card:hover { border-color: #444; transform: translateY(-3px); }
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: #1e1e1e;
+  overflow: hidden;
+}
+
+.card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s;
+}
+.card:hover .card__img img { transform: scale(1.06); }
+
+.card__body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  line-height: 1.25;
+}
+
+.card__desc {
+  margin: 0;
+  color: #bdbdbd;
+  font-size: .8rem;
+  line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 0 50px;
+  font-size: .7rem;
+  color: #7d7d7d;
+}
+
+@media (max-width: 760px) {
+  .hero-content h1 { font-size: 2.1rem; }
+  .blog-grid { gap: 22px; }
+}
