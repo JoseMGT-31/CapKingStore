@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapKing Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://kit.fontawesome.com/dd4a418d4e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="logo">
+               <img src="assets/images/logo_capking_white.png" alt="CapKing Store Logo">
+            </div>
+
+            <a href="carrito.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>CapKing Store</h1>
+                <p>Las mejores gorras para marcar tu estilo.</p>
+                <a href="#productos" class="hero-button">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Ver Productos
+                </a>
+            </div>
+        </section>
+
+        <section id="productos">
+            <div class="container">
+                <div class="productos-header">
+                    <h2 class="productos-title">Productos</h2>
+                    <p class="productos-subtitle">Nuestra nueva colección</p>
+                </div>
+
+                <div id="gridProductos" class="grid"></div>
+            </div>
+        </section>
+
+        <script src="js/productos.js" defer></script>
+    </main>
+    
+
+    <footer>
+        <p>© 2025 CapKing Store - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
