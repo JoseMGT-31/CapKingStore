@@ -1,0 +1,159 @@
+@font-face {
+  font-family: Boxed;
+  src: url('../assets/fonts/BoxedRoundBook.ttf');
+}
+
+body{
+  font-family: Boxed;
+  background-color: #000;
+}
+
+
+.hero {
+  min-height: 90vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/images/bg-home.webp"); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 0 10%;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.hero-button{
+  font-size: 1.2rem;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  background-color: #000000b9;
+  border: 1px solid #ffd900;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Cards productos (carrito feedback) */
+.card__btn.added{ background:#1f3d16 !important; color:#9dff7a !important; border-color:#395b2e !important; }
+
+.hero-button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+
+footer {
+  background: #000;                
+  border-top: 1px solid #333;      
+  padding: 20px 0;
+  text-align: center;            
+  color: #ffffff;                   
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+#productos {
+  padding: 25px 5%;
+}
+
+.productos-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.productos-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.productos-subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(3, auto);   
+  gap: 20px;
+  justify-content: center;  
+  align-items: center;      
+  max-width: 1200px;        
+  margin: 0 auto;          
+}
+
+.card {
+  background: #1b1b1b;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #ddd;
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: #2a2a2a;
+}
+
+.card__body { 
+  padding: 10px 12px; 
+}
+
+.card__title { 
+  margin: 6px 0 2px; 
+  font-weight: 600; 
+  text-decoration: none;
+  color: rgb(211, 179, 0)
+}
+
+.card__attrs { 
+  color: #9aa0a6; 
+  font-size: .9rem; 
+}
+
+.card__row { 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  margin-top: 8px; 
+}
+
+.card__price { 
+  font-weight: 700; 
+  color:#fff; 
+}
+
+.card__btn {
+  background:#ffd700; 
+  color:#000; border:none; 
+  padding:8px 10px;
+  border-radius:8px; 
+  cursor:pointer; 
+  font-weight:700;
+}
+
+.card__btn:hover { 
+  filter: brightness(.95); 
+}

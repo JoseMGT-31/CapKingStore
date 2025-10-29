@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'BoxedRound';
+  src: url('/assets/fonts/BoxedRoundBook.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'BoxedRound', Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+footer {
+  background-color: #0a0a0a;
+  color: #8a8a8a;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.empty {
+  text-align: center;
+  color: #8a8a8a;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
